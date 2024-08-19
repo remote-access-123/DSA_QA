@@ -1,0 +1,24 @@
+
+Finding large second largest  element
+
+def max_ele(a):
+    temp = a[0]
+    for i in range(1,len(a)):
+        if a[i] > temp:
+            temp = a[i]
+    curr_max = temp
+    temp=a[0]
+    for i in range(1,len(a)):
+        if a[i] > temp and a[i]!=curr_max:
+            temp = a[i]
+    if temp==curr_max:
+        return -1
+    return temp
+
+
+    
+
+        
+# a =[1,2,3,4,-5,7]
+b = [10,10,9,9]
+print(max_ele(b))
